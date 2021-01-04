@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 def toggle_derivative (y,t,args):
     
-    k_mLb, k_mTb, k_mLa, k_mTa, theta_L, theta_T, n_L, n_T, gamma_mL, gamma_mT, k_pL, k_pL, gamma_pL, gamma_pT = args
+    k_mLb, k_mTb, k_mLa, k_mTa, theta_L, theta_T, n_L, n_T, gamma_mL, gamma_mT, k_pL, k_pT, gamma_pL, gamma_pT = args
     
     mL, mT, pL, pT = y
     
@@ -14,9 +14,9 @@ def toggle_derivative (y,t,args):
     
     dmTdt = ?
     
-    dpLdt = ?
+    dpLdt = k_pL*mL - gamma_pL*pL
     
-    dpTdt = kTp*mT - gammaTp*pT
+    dpTdt = k_pT*mT - gamma_pT*pT
     
     return [dmLdt, dmTdt, dpLdt, dpTdt]
 
