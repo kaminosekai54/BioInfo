@@ -10,9 +10,9 @@ def toggle_derivative (y,t,args):
     
     mL, mT, pL, pT = y
     
-    dmLdt = ?
+    dmLdt = 
     
-    dmTdt = ?
+    dmTdt = 
     
     dpLdt = k_pL*mL - gamma_pL*pL
     
