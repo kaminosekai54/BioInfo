@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# cé Mona
 # Helper function 1: ODE model for the Toggle Switch
 
 def toggle_derivative (y,t,args):
@@ -10,9 +9,9 @@ def toggle_derivative (y,t,args):
     
     mL, mT, pL, pT = y
     
-    dmLdt = 
+    dmLdt = k_mLb+k_mTa*(1/(1+(pT**n_T)/(theta_T**n_T)))-gamma_mL*mL
     
-    dmTdt = 
+    dmTdt = k_mTb+k_mLa*(1/(1+(pL**n_L)/(theta_L**n_L)))-gamma_mT*mT
     
     dpLdt = k_pL*mL - gamma_pL*pL
     
