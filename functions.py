@@ -32,9 +32,9 @@ def toggle_derivative (y, t, args):
     #  return of the computed derivative in a list
     return [dmLdt, dmTdt, dpLdt, dpTdt]
 
-	#functions that returns the value of the QSS equations of mL and mT for any given product value
+
 # function sol_lf
-#functions that returns the value of the QSS equations of mL and mT for any given product value
+#returns the value of the QSS equations of mL for any given product value
 # @param,
 # @pT,product value 
 # @stl, expression of the equation
@@ -43,7 +43,7 @@ def sol_lf(pT, stl):
 	stl=stl.subs("pT",n)
 	return eval(str(stl))
 # function sol_lf
-#functions sol_tfreturns the value of the QSS equations of mT and mT for any given product value
+#returns the value of the QSS equations of mT for any given product value
 # @param,
 # @pL, product value 
 # @stt, expression of the equation
