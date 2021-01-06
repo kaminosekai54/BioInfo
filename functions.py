@@ -62,11 +62,9 @@ def draw_phase_space (args):
     pT_vector = np.linspace(0,2000,35)
 
     # creating our vector (the size is 35 because of the linspace before)
+    #  np.zero creat a matrix full by zero of a size of the parameter, here 35
     mL_vector = np.zeros((35))
     mT_vector = np.zeros((35))
-
-    # Return coordinate matrices from coordinate vectors.
-    LacI_vector, TetR_vector = np.meshgrid(pL_vector, pT_vector)
 
     # getting the value of our derivative 
     for i in range(len(pT_vector)):
@@ -76,6 +74,7 @@ def draw_phase_space (args):
         mT_vector[i]  = (k_mTb+k_mTa*(1/(1+(pL_vector[i]**n_L/theta_L**n_L))))/gamma_mT
         
     #create matrices for our quiver plot
+    # those matrix are used to creat the vector space
     aux1= np.zeros((35, 35, 2))
     aux2 = np.zeros((35, 35, 2))
 
@@ -88,6 +87,7 @@ def draw_phase_space (args):
 
     #get the points of the nullclines, using nullified differential equations for product formation
     nullclineL=[]
+    # Iterating over our mrna vectors, in order to plot the nullcline for those values
     for i in mL_vector:
         pl=(k_pL*i)/gamma_pL
         nullclineL.append(pl)
