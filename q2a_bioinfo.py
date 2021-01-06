@@ -1,24 +1,8 @@
+# import of the package
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
-
-
-
-
-# Helper function 1: ODE model for the Toggle Switch
-
-def toggle_derivative (y, t, args):
-	k_mLb, k_mTb, k_mLa, k_mTa, theta_L, theta_T, n_L, n_T, gamma_mL, gamma_mT, k_pL, k_pT, gamma_pL, gamma_pT = args
-	mL, mT, pL, pT = y
-
-# Helper function 2: plot the behavior of the system in the protein state space
-
-	dmLdt = k_mLb+k_mLa*(1/(1+(pT**n_T)/(theta_T**n_T)))-gamma_mL*mL
-	dmTdt = k_mTb+k_mTa*(1/(1+(pL**n_L)/(theta_L**n_L)))-gamma_mT*mT
-	dpLdt = k_pL*mL - gamma_pL*pL
-	dpTdt = k_pT*mT - gamma_pT*pT
-                         
-	return  [dmLdt, dmTdt, dpLdt, dpTdt]
+from functions import *
 
 def main():
 	args = [0.0082, 0.0149, 1, 0.3865, 600, 500, 4,4, 0.04, 0.04, 0.1, 0.1, 0.002, 0.002]
