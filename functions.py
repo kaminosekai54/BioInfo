@@ -1,12 +1,12 @@
 # this file will contain all the function used for the different test
 
-# importing the requiered package
+# importing the required packages
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
+
+
 #  function toggle_derivative
-
-
 # This function compute the derivative wanted to study the toggle switch circuit
 # @param
 # @y, a list containing the initial concentration values for our reactances and product
@@ -74,9 +74,11 @@ def draw_phase_space (args):
     
     for i in range (len(pL_vector)):
         mT_vector[i]  = (k_mTb+k_mTa*(1/(1+(pL_vector[i]**n_L/theta_L**n_L))))/gamma_mT
+        
     #create matrices for our quiver plot
     aux1= np.zeros((35, 35, 2))
     aux2 = np.zeros((35, 35, 2))
+
     #fill the quiver matrixes, with the created vectors of proteins.
     for i in range(len(pL_vector)):
         for j in range(len(pT_vector)):
