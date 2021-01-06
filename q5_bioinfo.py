@@ -91,7 +91,7 @@ def sliders_on_changed(val):
 
             #plot the new integrated values
             if recap:
-                g.plot(model[:,2], model[:,3], color=trajectory_color)
+                g.plot(model[:,2], model[:,3], color=trajectory_color,linewidth=0.75)
             else:
                 g[1].plot(model[:,2], model[:,3], color=trajectory_color)
     if recap:
