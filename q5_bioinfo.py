@@ -58,7 +58,7 @@ def sliders_on_changed(val):
     ps=draw_phase_space(args)
     #plot the phase space and nullclines
     if recap:
-        g.quiver(ps[-2][:,:,0],ps[-2][:,:,1], ps[-1][:,:,0], ps[-1][:,:,1],minshaft=0.1,minlength=0.3,headlength=2,headaxislength=2,headwidth=3,alpha=0.8,width=0.002,linestyle='solid')
+        g.quiver(ps[-2][:,:,0],ps[-2][:,:,1], ps[-1][:,:,0], ps[-1][:,:,1],minshaft=0.1,minlength=0.3,headlength=2,headaxislength=2,headwidth=3,alpha=0.4,width=0.002,linestyle='solid')
     else:
         g[0].quiver(ps[-2][:,:,0],ps[-2][:,:,1], ps[-1][:,:,0], ps[-1][:,:,1])
         g[0].plot(ps[2],ps[0],'g',label="LacI nullcline")
